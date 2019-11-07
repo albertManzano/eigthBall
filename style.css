@@ -1,30 +1,105 @@
+@keyframes rotatebola{
+  from{ 
+    transform:rotate(0deg);
+  } 
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes jumpball{
+  0%{ 
+    margin-top: 0px;
+  } 
+  50% {
+    margin-top: 100px;
+  }
+  100%{
+    margin-top: 0px;
+  }
+}
+
+
+@keyframes shrink{
+  0%{ 
+    width: 250px;
+  } 
+  50% {
+    width: 125px;
+  }
+  100%{
+    width: 250px;
+  }
+}
+
+
+
 .bola {
-  height: 400px;
-  width: 400px;
+  height: 250px;
+  width: 250px;
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  background: radial-gradient(circle at 30vmin 30vmin, #444, #000);
+  /*box-shadow: 48px 45px 52px -48px #000000;*/
+}
+
+
+
+.shadow{
+  height: 250px;
+  width: 250px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  background: radial-gradient(50% 50%, #000 0%,transparent 100%); height: 50px; width: 200px;;
+ 
+}
+
+.jump{
+  animation: jumpball 1s linear infinite, shrink 1s linear infinite;
+}
+
+.rotateball {
+  animation: rotatebola 1s linear ;
+}
+
+body {
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .pregunta {
-  margin: 15px;
+  margin: 40px;
   padding: 10px;
   justify-content: center;
   box-sizing: content-box;
   text-align: center;
-  
 }
 
 .ocho {
   font-family: 'Courier New', Courier, monospace;
   font-size: 50;
-  text-align: center;
+  background-color: white;
+  display: flex;
   justify-content: center;
-  justify-self: center;
+  align-items: center;
   border:solid 1px grey;
   border-radius: 50%;
   padding: 10px;
   width: 100px;
   height: 100px;
+  padding-top: 10px;
+  font-weight: bold;
+  outline: none;
   
 }
 
