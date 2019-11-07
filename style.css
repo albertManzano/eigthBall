@@ -1,0 +1,34 @@
+.bola {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.pregunta {
+  margin: 15px;
+  padding: 10px;
+  justify-content: center;
+  box-sizing: content-box;
+  text-align: center;
+  
+}
+
+.ocho {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  border:solid 1px grey;
+  border-radius: 50%;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  
+}
+
+.ocho:hover {
+  color: grey;
+
+}
