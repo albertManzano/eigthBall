@@ -32,6 +32,37 @@
   }
 }
 
+@keyframes shrinksoft{
+  0%{ 
+    width: 250px;
+  } 
+  50% {
+    width: 225px;
+  }
+  100%{
+    width: 250px;
+  }
+}
+
+@keyframes float { 
+  0% { 
+    -webkit-transform: translate3d(0,-4px,0);
+     transform: translate3d(0,-4px,0) 
+    } 
+    
+  to { 
+    -webkit-transform: translate3d(0,4px,0);
+    transform: translate3d(0,4px,0) 
+    } 
+}
+
+@keyframes destello {
+  from{
+    background-color: tomato;
+  }to{
+    background-color: rgb(104, 255, 4);
+  }
+}
 
 
 .bola {
@@ -45,6 +76,8 @@
   justify-content: center;
   background: radial-gradient(circle at 30vmin 30vmin, #444, #000);
   /*box-shadow: 48px 45px 52px -48px #000000;*/
+  animation: float 0.5s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 
@@ -57,7 +90,8 @@
   align-items: center; 
   justify-content: center;
   background: radial-gradient(50% 50%, #000 0%,transparent 100%); height: 50px; width: 200px;;
- 
+  animation: shrinksoft 1s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 .jump{
@@ -68,6 +102,11 @@
   animation: rotatebola 1s linear ;
 }
 
+.flickering{
+  animation:  destello 2s cubic-bezier(0.93, 0, 1, 0.03) alternate infinite;
+}
+
+
 body {
   background-color: tomato;
   display: flex;
@@ -75,7 +114,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-}
+  }
 
 .pregunta {
   margin: 40px;
